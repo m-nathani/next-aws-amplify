@@ -25,7 +25,7 @@ export default async function middleware(req: NextRequest) {
   subdomain = subdomain.replace("localhost:3000", "");
 
   // handle no subdomain or www with base path
-  if (subdomain === "www" || subdomain === "") {
+  if (subdomain === "www" || subdomain === "" || subdomain === "main") {
     return NextResponse.next();
   }
 
